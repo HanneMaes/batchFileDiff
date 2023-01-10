@@ -1,1 +1,1 @@
-![Terminal output](output.png)
+![Terminal output](carbon.png)
