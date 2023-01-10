@@ -1,0 +1,1 @@
+![Terminal output](output.png)
