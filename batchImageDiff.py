@@ -8,7 +8,7 @@ namesAndHashes = []
 print()
 
 # Get all images in the current dir
-extensions = ('.jpeg', '.jpg', '.png', '.gif', '.bmp') # Define the extension of image files
+extensions = ('.jpeg', '.jpg', '.png', '.gif', '.bmp', '.JPEG', '.JPG', '.PNG', '.GIF', '.BMP') # Define the extension of image files
 current_dir = os.getcwd() # Get the current directory
 for filename in os.listdir(current_dir): # Loop over all files in the directory
     if filename.endswith(extensions): # Check if the file is an image
