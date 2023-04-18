@@ -34,6 +34,7 @@ print()
 print('Checking these ' + str(len(namesAndHashes)) + ' files:')
 for i in namesAndHashes:
     print('   ➡️ ' + i[0])
+    #print('   -> ' + i[0])
 print()
 
 # Sort array
@@ -46,20 +47,27 @@ for i in range(0, len(namesAndHashes)-1): # len(namesAndHashes)-1 because I chec
     # Check if this file is the same as the next one
     if namesAndHashes[i][1] == namesAndHashes[i+1][1]:
         print('❌ ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
+        #print('X ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
         prevIsDifferent = True
     else:
         # If the prev file was flagged as the same we always need a ❌, but we also need to check againt the next file
         if prevIsDifferent == False:
             print('🟢 ' + namesAndHashes[i][1])
+            #print('V ' + namesAndHashes[i][1])
         else:
             print('❌ ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
+            print('❌ ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
+            #print('X ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
+            #print('X ' + namesAndHashes[i][1] + ' ➡️ ' + namesAndHashes[i][0])
         prevIsDifferent = False
 
 # Last image was already checked in the loop
 lastItem = len(namesAndHashes) - 1
 if prevIsDifferent == False: # If the prev file was flagged as the same we always need a ❌, but we also need to check againt the next file
     print('🟢 ' + namesAndHashes[lastItem][1])
+    #print('V ' + namesAndHashes[lastItem][1])
 else:
     print('❌ ' + namesAndHashes[lastItem][1] + ' ➡️ ' + namesAndHashes[lastItem][0])
+    #print('X ' + namesAndHashes[lastItem][1] + ' ➡️ ' + namesAndHashes[lastItem][0])
 
 print()
